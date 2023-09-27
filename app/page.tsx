@@ -220,14 +220,14 @@ export default function Home() {
         <motion.section
           initial={{ boxShadow: "none" }}
           animate={{ boxShadow: "0px 30px 60px 0px rgba(61, 108, 236, 0.15)" }}
-          transition={{ delay: 0 }}
+          transition={{ delay: 3 }}
           className="md:rounded-4xl md:max-h-128  relative flex w-full flex-col overflow-hidden md:max-w-3xl md:flex-row"
         >
           <motion.div
             initial={{ x: "var(--x-result)" }}
             animate={{ x: 0 }}
-            transition={{ duration: 0, delay: 0 }}
-            className="rounded-b-4xl md:rounded-4xl  relative z-20 w-full overflow-hidden md:w-1/2"
+            transition={{ duration: 1, delay: 1 }}
+            className="rounded-b-4xl md:rounded-4xl relative z-20 w-full overflow-hidden md:w-1/2"
           >
             <div className="pb-13 bg-score-container   px-12 pt-9 text-center ">
               <h1 className="text-light-blue mb-8 text-lg font-bold">
@@ -255,10 +255,10 @@ export default function Home() {
               opacity: 1,
               transition: {
                 opacity: { duration: 0 },
-                x: { duration: 0 },
-                y: { duration: 0 },
+                x: { duration: 1 },
+                y: { duration: 1 },
 
-                delay: 0,
+                delay: 2,
               },
             }}
             className="md:rounded-4xl  relative z-10 w-full overflow-hidden bg-white md:w-1/2"
@@ -266,7 +266,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: "var(--opacity-score)" }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0, delay: 0 }}
+              transition={{ duration: 1, delay: 3 }}
               className="relative w-full px-10 pb-11 pt-9 "
             >
               <p className="text-dark-navy mb-7 text-2xl font-bold">Summary</p>
@@ -284,7 +284,7 @@ export default function Home() {
                       animate: (i) => ({
                         opacity: 1,
                         transition: {
-                          delay: 0,
+                          delay: i + item.id / 3,
                         },
                       }),
                     }}
@@ -317,7 +317,7 @@ export default function Home() {
                       initial: { opacity: 0 },
                       hover: { opacity: 1 },
                     }}
-                    transition={{ duration: 0 }}
+                    transition={{ duration: 0.3 }}
                     className="rounded-12xl bg-button absolute top-0 block h-full w-full group-hover:cursor-pointer"
                   />
                 </motion.span>
@@ -327,9 +327,9 @@ export default function Home() {
                 initial={{ opacity: "var(--opacity-score)" }}
                 animate={{
                   opacity: 1,
-                  transition: { delay: 0, duration: 0 },
+                  transition: { delay: 4.75, duration: 0.3 },
                 }}
-                whileHover={{ scale: 1.1, transition: { duration: 0 } }}
+                whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
                 className="absolute right-10 top-10 z-20 md:right-5 md:top-5"
                 onClick={handleRandom}
               >
@@ -340,7 +340,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: "var(--opacity-score)" }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0, delay: 0 }}
+            transition={{ duration: 0, delay: 2.5 }}
             className="absolute top-1/2 z-0  h-36 w-full -translate-y-1/2 transform bg-white md:left-1/2 md:block md:h-full md:w-16 md:-translate-x-1/2"
           />
         </motion.section>
