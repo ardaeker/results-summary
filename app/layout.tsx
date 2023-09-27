@@ -2,7 +2,10 @@ import "@/styles/tailwind.css";
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 
-const font = Hanken_Grotesk({ subsets: ["latin"] });
+const font = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+});
 
 export const metadata: Metadata = {
   title: "Results Summary Component Solution - Arda Eker",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={`${font.className} ${font.variable}`}>{children}</body>
     </html>
   );
 }

@@ -46,6 +46,9 @@ const config: Config = {
         "10": "2.56rem",
         "8": "2.19rem",
       },
+      fontFamily: {
+        hankenGrotesk: ["var(--font-hanken-grotesk)"],
+      },
     },
   },
   plugins: [],

@@ -215,14 +215,19 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-very-light-blue text- flex min-h-screen items-center justify-center">
+    <main className="bg-very-light-blue flex min-h-screen items-center justify-center text-[]">
       <MotionConfig transition={{ ease: [0.32, 0.72, 0, 1] }}>
-        <section className="md:rounded-4xl md:max-h-128 relative flex w-full flex-col overflow-hidden md:max-w-3xl md:flex-row">
+        <motion.section
+          initial={{ boxShadow: "none" }}
+          animate={{ boxShadow: "0px 30px 60px 0px rgba(61, 108, 236, 0.15)" }}
+          transition={{ delay: 0 }}
+          className="md:rounded-4xl md:max-h-128  relative flex w-full flex-col overflow-hidden md:max-w-3xl md:flex-row"
+        >
           <motion.div
             initial={{ x: "var(--x-result)" }}
             animate={{ x: 0 }}
             transition={{ duration: 0, delay: 0 }}
-            className="rounded-b-4xl md:rounded-4xl relative z-20 w-full overflow-hidden md:w-1/2"
+            className="rounded-b-4xl md:rounded-4xl  relative z-20 w-full overflow-hidden md:w-1/2"
           >
             <div className="pb-13 bg-score-container   px-12 pt-9 text-center ">
               <h1 className="text-light-blue mb-8 text-lg font-bold">
@@ -256,13 +261,13 @@ export default function Home() {
                 delay: 0,
               },
             }}
-            className="md:rounded-4xl relative z-10 w-full overflow-hidden bg-white md:w-1/2"
+            className="md:rounded-4xl  relative z-10 w-full overflow-hidden bg-white md:w-1/2"
           >
             <motion.div
               initial={{ opacity: "var(--opacity-score)" }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0, delay: 0 }}
-              className="relative w-full px-10 pb-11 pt-9"
+              className="relative w-full px-10 pb-11 pt-9 "
             >
               <p className="text-dark-navy mb-7 text-2xl font-bold">Summary</p>
               <ul className="mb-10 flex flex-col gap-y-4">
@@ -338,7 +343,7 @@ export default function Home() {
             transition={{ duration: 0, delay: 0 }}
             className="absolute top-1/2 z-0  h-36 w-full -translate-y-1/2 transform bg-white md:left-1/2 md:block md:h-full md:w-16 md:-translate-x-1/2"
           />
-        </section>
+        </motion.section>
       </MotionConfig>
     </main>
   );
