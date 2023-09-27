@@ -236,7 +236,7 @@ export default function Home() {
                   </span>
                 </p>
               </div>
-              <h3 className="text-3xl font-bold text-white">Great</h3>
+              <p className="text-3xl font-bold text-white">Great</p>
               <p className="text-light-blue text-lg font-medium">
                 Your performance exceed 65% of the people conducting the test
                 here!
@@ -264,9 +264,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 3 }}
               className="relative w-full px-10 pb-11 pt-9"
             >
-              <h2 className="text-dark-navy mb-7 text-2xl font-bold">
-                Summary
-              </h2>
+              <p className="text-dark-navy mb-7 text-2xl font-bold">Summary</p>
               <ul className="mb-10 flex flex-col gap-y-4">
                 {data.map((item) => (
                   <motion.li
@@ -303,7 +301,10 @@ export default function Home() {
                   </motion.li>
                 ))}
               </ul>
-              <motion.button className="bg-dark-navy rounded-12xl  relative h-14 w-full text-lg font-bold text-white">
+              <motion.button
+                aria-label="Continue"
+                className="bg-dark-navy rounded-12xl  relative h-14 w-full text-lg font-bold text-white"
+              >
                 <motion.span initial="initial" whileHover="hover">
                   <span className="group relative z-10">Continue</span>
                   <motion.span
@@ -317,6 +318,7 @@ export default function Home() {
                 </motion.span>
               </motion.button>
               <motion.button
+                aria-label="Refresh Data"
                 initial={{ opacity: "var(--opacity-score)" }}
                 animate={{
                   opacity: 1,
