@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --x-result: 0%;
+  --x-score: 0%;
+  --opacity-score: 100%;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --x-result: 50%;
+    --x-score: -100%;
+    --opacity-score: 0%;
+  }
+}
+
+@layer components {
+  .bg-reaction {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 100%
+      ),
+      #f55;
+  }
+  .bg-memory {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 100%
+      ),
+      #ffb21e;
+  }
+  .bg-verbal {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 100%
+      ),
+      #00bb8f;
+  }
+  .bg-visual {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.95) 100%
+      ),
+      #1125d6;
+  }
+  .bg-button {
+    background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  }
+  .bg-score {
+    background: linear-gradient(
+      180deg,
+      #4d21c9 0%,
+      rgba(37, 33, 201, 0) 100%,
+      rgba(37, 33, 201, 0) 100%
+    );
+  }
+  .bg-score-container {
+    background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  }
+}
