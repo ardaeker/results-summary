@@ -221,7 +221,7 @@ export default function Home() {
           <motion.div
             initial={{ x: "var(--x-result)" }}
             animate={{ x: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0 }}
             className="rounded-b-4xl md:rounded-4xl relative z-20 w-full overflow-hidden md:w-1/2"
           >
             <div className="pb-13 bg-score-container   px-12 pt-9 text-center ">
@@ -253,7 +253,7 @@ export default function Home() {
                 x: { duration: 1 },
                 y: { duration: 1 },
 
-                delay: 2,
+                delay: 0,
               },
             }}
             className="md:rounded-4xl relative z-10 w-full overflow-hidden bg-white md:w-1/2"
@@ -261,7 +261,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: "var(--opacity-score)" }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 3 }}
+              transition={{ duration: 1, delay: 0 }}
               className="relative w-full px-10 pb-11 pt-9"
             >
               <p className="text-dark-navy mb-7 text-2xl font-bold">Summary</p>
@@ -279,7 +279,7 @@ export default function Home() {
                       animate: (i) => ({
                         opacity: 1,
                         transition: {
-                          delay: i + item.id / 3,
+                          delay: 0,
                         },
                       }),
                     }}
@@ -335,7 +335,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: "var(--opacity-score)" }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0, delay: 2.5 }}
+            transition={{ duration: 0, delay: 0 }}
             className="absolute top-1/2 z-0  h-36 w-full -translate-y-1/2 transform bg-white md:left-1/2 md:block md:h-full md:w-16 md:-translate-x-1/2"
           />
         </section>
